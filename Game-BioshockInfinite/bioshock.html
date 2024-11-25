@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bioshock</title>
+  <link rel="stylesheet" href="bioshock.css">
+  
+ 
+</head>
+<body>
+  <div class="game-container">
+    <h1>Bioshock Infinite</h1>
+
+    <!-- Abas para navegar entre conteúdo -->
+    <div class="tabs">
+      <div class="tab" id="tab-history">História</div>
+      <div class="tab" id="tab-characters">Personagens</div>
+    </div>
+
+    <!-- Conteúdo das abas -->
+    <div class="tab-content" id="content-history">
+      <h2>História do Jogo</h2>
+      <p>contando</p>
+      <p>a historia</p>
+      <p>do jogo</p>
+    </div>
+
+    <div class="tab-content" id="content-characters">
+      <h2>Personagens Principais</h2>
+
+      <!-- Personagens -->
+      <div class="character">
+        <img src="personagem.png" alt="Nome do personagem">
+        <div>
+          <h3>Nome do personagem</h3>
+          <p>explicando personagem</p>
+        </div>
+      </div>
+
+      <div class="character">
+        <img src="personagem.png" alt="Nome do personagem">
+        <div>
+          <h3>Nome do personagem</h3>
+          <p>explicando personagem</p>
+        </div>
+      </div>
+
+      <div class="character">
+        <img src="personagem.png" alt="Nome do personagem">
+        <div>
+          <h3>Nome do personagem</h3>
+          <p>explicando personagem</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Selecionando as abas e conteúdos
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove a classe ativa de todas as abas e conteúdos
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active-tab-content'));
+
+        // Adiciona a classe ativa na aba e no conteúdo correspondentes
+        tab.classList.add('active');
+        const contentId = tab.id.replace('tab', 'content');
+        document.getElementById(contentId).classList.add('active-tab-content');
+      });
+    });
+
+    // Definir a primeira aba como ativa por padrão
+    document.getElementById('tab-history').classList.add('active');
+    document.getElementById('content-history').classList.add('active-tab-content');
+  </script>
+</body>
+</html>
