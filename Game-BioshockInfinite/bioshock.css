@@ -110,28 +110,5 @@ body {
   }
   
   
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .container {
-      padding: 15px;
-    }
   
-    .character {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .character img {
-      margin-right: 0;
-      margin-bottom: 15px;
-    }
-  
-    .character h3 {
-      font-size: 1.4em;
-    }
-  
-    .character p {
-      font-size: 1em;
-    }
-  }
   
